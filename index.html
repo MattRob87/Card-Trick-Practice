@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Card Trick</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Card Trick</h1>
 
-  <div class="top-buttons">
-    <button onclick="revealLeftNumber()">Reveal Left Number</button>
-    <button onclick="revealRightNumber()">Reveal Right Number</button>
-  </div>
-
   <div class="card-container">
-    <div class="card-wrapper">
+    <div class="card-col">
       <p id="originalLabel">?</p>
-      <img id="originalCard" class="card-img" src="images/back.png" alt="Original Card" />
+      <img id="originalCard" src="images/back.png" alt="Original Card">
+      <button onclick="revealLeftNumber()">Reveal Left Number</button>
     </div>
-
-    <div class="card-wrapper">
+    <div class="card-col">
       <p id="resultLabel">?</p>
-      <div class="card" id="resultCard" onclick="flipCard()">
-        <div class="card-inner" id="resultCardInner">
-          <div class="card-front">
-            <img src="images/back.png" alt="Card Back" />
-          </div>
-          <div class="card-back">
-            <img id="resultCardImg" src="" alt="Card Face" />
-          </div>
-        </div>
-      </div>
+      <img id="resultCard" src="images/back.png" alt="Result Card">
+      <button onclick="revealRightNumber()">Reveal Right Number</button>
     </div>
   </div>
 
   <div class="number-display" id="offsetNumber">?</div>
 
-  <div class="bottom-buttons">
+  <div class="buttons">
     <button onclick="generate()">Generate</button>
     <button onclick="revealRightCard()">Reveal Right Card</button>
-    <button onclick="flipCard()">Flip Card</button>
   </div>
 
   <script src="script.js"></script>
